@@ -24,6 +24,7 @@ const theme = {
   "global": {
     "colors": {
       "brand": "#ED6F00",
+      "light": "#DADADA",
       "background": {
         "dark": "#111111",
         "light": "#FFFFFF"
@@ -119,17 +120,16 @@ const theme = {
       "dark": "#111111",
       "light": "#FFFFFF"
     }
-  },
-  "email": "lea.semiramoth@ynov.com"
+  }
 }
 
 const HomePage = () => {
     
   return (
     <Grommet full theme={theme}>
-      <Box align="center" justify="center" background={{"dark":false}}>
+      <Box align="center" justify="center" background={{"dark":false, 'image':'url(https://i.pinimg.com/originals/d2/22/59/d222595cf4cada08a891e3544e5a465b.jpg)', "size": "contain", 'repeat': 'repeat'}}>
         <Header align="center" direction="row" flex={false} justify="between" gap="medium">
-            <Heading>Mes experiences en entreprise</Heading>
+            <Heading color="light">Mes experiences en entreprise</Heading>
         </Header>
         <Experience />
       </Box>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, Button, Text, Paragraph } from 'grommet'
+import { Box, Heading, Button, Text, Paragraph, Image } from 'grommet'
 import { Previous } from 'grommet-icons'
 
 const theme = {
@@ -21,22 +21,27 @@ const Experience = () => {
     ]);
 
     return(
-        <Box align="center" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}}>
+        <Box align="stretch" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}}>
         {exps.map(exp => (
-            <Box align="center" pad="small" background={{"color":"white","position":"bottom"}} round="medium" elevation="xlarge" margin="small" direction="column" alignSelf="center" animation={{"type":"fadeIn","size":"medium"}} justify="center" wrap={false} width="medium">
+            <Box align="stretch" fil="horizontal" gap="xlarge" background={{"color":"#7F8C8D","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} width="300px">
                 <Box align="center" justify="center" pad="xsmall" margin="xsmall">
-                    <Box align="center" justify="center" pad="large" width="xsmall" margin="medium" background={{"dark":false,"color":"white","image":`url(${exp.img})`, 'position':'top left'}}  />
+                    <Box height="small" width="small">
+                        <Image 
+                            fit="contain"
+                            src={exp.img}
+                        />
+                    </Box>
                     <Heading level="3" size="medium" margin="xsmall" textAlign="center">
                         {exp.title}
                     </Heading>
-                    <Text textAlign="center">
-                        {exp.baseline}
+                    <Text textAlign="center" size="small">
+                        "{exp.baseline}"
                     </Text>
                     <Paragraph size="small" margin="xsmall" textAlign="center">
                         {exp.desc}
                     </Paragraph>
                     <Paragraph size="small" margin="xsmall" textAlign="center">
-                        {exp.technos}
+                       <strong>Langage(s) :</strong> {exp.technos}
                     </Paragraph>
                 </Box>
             </Box>
