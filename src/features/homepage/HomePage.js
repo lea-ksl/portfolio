@@ -129,8 +129,7 @@ const HomePage = () => {
     <Grommet full theme={theme}>
       <Box align="center" justify="center" background={{"dark":false}}>
         <Header align="center" direction="row" flex={false} justify="between" gap="medium">
-            
-            
+            <Heading>Mes experiences en entreprise</Heading>
         </Header>
         <Experience />
       </Box>
