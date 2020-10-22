@@ -3,6 +3,7 @@ import Experience from "../experience/Experience"
 
 
 import { Grommet, Box, Header, Heading, Button, Text, Paragraph, Image } from 'grommet'
+import NavBar from "../navigation/NavBar";
 
 const theme = {
   "name": "aruba",
@@ -116,6 +117,7 @@ const HomePage = () => {
   return (
     <Grommet full theme={theme}>
       <Box align="center" justify="center" background={{"dark":false, 'image':'url(https://i.pinimg.com/originals/d2/22/59/d222595cf4cada08a891e3544e5a465b.jpg)', "size": "contain", 'repeat': 'repeat'}}>
+        <NavBar />
         <Header align="center" direction="row" flex={false} justify="between" gap="medium">
             <Heading color="light">Mes experiences en entreprise</Heading>
         </Header>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Grommet, Anchor, Nav } from 'grommet'
+import { Grommet, Anchor, Nav, Box } from 'grommet'
 
 const theme = {
   "global": {
@@ -13,11 +13,13 @@ const theme = {
 
 const NavBar = () => {
     return (
-        <Nav direction="row" background="black" pad="small">
-            <Anchor color="grey" href="#" label="Accueil" />
-            <Anchor color="grey" href="#" label="Présentation" />
-            <Anchor color="grey" href="#" label="Experiences" />
-        </Nav>
+        <Box background="black" width="100%">
+            <Nav direction="row" pad="small" justify="center">
+                <Anchor color="grey" href="/" label="Accueil" />
+                <Anchor color="grey" href="#" label="Présentation" />
+                <Anchor color="grey" href="/cv" label="Experiences" />
+            </Nav>
+        </Box>
     )
 }
 
