@@ -117,7 +117,7 @@ const CvPage = () => {
       <Box align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>
         <NavBar />
         <Header align="center" direction="row" flex={false} justify="between" gap="medium">
-            <Heading color="light">Mes experiences en entreprise</Heading>
+            <Heading color="light">Expériences en entreprise</Heading>
         </Header>
         <Experience />
       </Box>
