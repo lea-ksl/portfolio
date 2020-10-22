@@ -1,7 +1,6 @@
 import React from "react";
-import NavBar from '../navigation/NavBar'
 
-import { Grommet, Box, Header, Heading, Button, Text, Paragraph, Image, Anchor, Nav } from 'grommet'
+import { Grommet, Anchor, Nav } from 'grommet'
 
 const theme = {
   "global": {
@@ -12,25 +11,14 @@ const theme = {
   }
 }
 
-const HomePage = () => {
-    
-  return (
-    <Grommet full theme={theme}>
-      <Box align="center" justify="center" background={{"dark":true, "color": "#000000"}}>
-        <Header align="center" direction="column" flex={false} justify="between" gap="small" height="100vh">
-            <Heading color="light">Léa Semiramoth</Heading>
-            <Image
-              width="800px"
-              fit="contain"
-              src="https://ksl-webdesign.com/wp-content/uploads/2016/11/skulllogosite.png"
-            />
-            <NavBar />
-        </Header>
-        
-      </Box>
-    </Grommet>
-  )
+const NavBar = () => {
+    return (
+        <Nav direction="row" background="black" pad="small">
+            <Anchor color="grey" href="#" label="Accueil" />
+            <Anchor color="grey" href="#" label="Présentation" />
+            <Anchor color="grey" href="#" label="Experiences" />
+        </Nav>
+    )
 }
 
-
-export default HomePage;
+export default NavBar;

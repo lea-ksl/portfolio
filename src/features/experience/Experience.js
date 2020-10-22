@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Heading, Button, Text, Paragraph, Image } from 'grommet'
-import { Previous } from 'grommet-icons'
 
 const theme = {
 
