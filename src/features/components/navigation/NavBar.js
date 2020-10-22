@@ -16,7 +16,7 @@ const NavBar = () => {
         <Box background="black" width="100%">
             <Nav direction="row" pad="small" justify="center">
                 <Anchor color="grey" href="/" label="Accueil" />
-                <Anchor color="grey" href="#" label="Présentation" />
+                <Anchor color="grey" href="/presentation" label="Présentation" />
                 <Anchor color="grey" href="/cv" label="Experiences" />
             </Nav>
         </Box>
