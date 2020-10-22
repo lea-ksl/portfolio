@@ -1,6 +1,7 @@
 import React from 'react';
-import HomePage from './features/homepage/HomePage';
-import CvPage from './features/cv/CvPage'
+import HomePage from './features/pages/homepage/HomePage';
+import CvPage from './features/pages/cv/CvPage'
+import PresentationPage from './features/pages/presentation/PresentationPage'
 import { Grommet } from 'grommet';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -14,6 +15,9 @@ const App = () => {
           </Route>
           <Route exact path="/cv" >
             <CvPage />
+          </Route>
+          <Route exact path="/presentation" >
+            <PresentationPage />
           </Route>
         </Switch>
       </Grommet>

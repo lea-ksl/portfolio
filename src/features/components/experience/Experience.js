@@ -75,11 +75,6 @@ const Experience = () => {
             </Box>
         </Box>
     );
-}
-
-
-        
-       
-   
+}   
 
 export default Experience;
