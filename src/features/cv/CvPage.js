@@ -91,7 +91,7 @@ const theme = {
       "color": "active-text"
     },
     "hover": {
-      "background": "active-background",
+      "background": "white",
       "color": "active-text"
     },
     "selected": {

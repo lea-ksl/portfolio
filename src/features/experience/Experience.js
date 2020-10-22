@@ -1,11 +1,15 @@
 import React from "react";
-import { Box, Heading, Button, Text, Paragraph, Image } from 'grommet'
+import { Box, Heading, Button, Text, Paragraph, Image, Layer } from 'grommet'
 
 const theme = {
 
 }
 
+
+
 const Experience = () => {
+    const [index, setIndex] = React.useState()
+    const [show, setShow] = React.useState()
     let [exps, setExps] = React.useState(
     [
         { key: "jobstic", title: "JobsTIC", baseline: "Le formum des métiers du numérique et de l'innovation", desc: "Conception et développement Front-end / Back-end", technos:"Meteor.js & React.js", img:"https://s3.eu-central-1.amazonaws.com/jobstic/documents/logo_jobstic_compressor-min.png" },
@@ -24,32 +28,58 @@ const Experience = () => {
 
     return(
         <Box align="stretch" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}}>
-        {exps.map(exp => (
-            <Box align="stretch" fil="horizontal" gap="xlarge" background={{"color":"#999999","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} width="300px">
-                <Box align="center" justify="center" pad="xsmall" margin="xsmall">
-                    <Box height="small" width="small">
-                        <Image 
-                            fit="contain"
-                            src={exp.img}
-                        />
+            {exps.map((exp, i) => (
+                <Box align="stretch" fil="horizontal" gap="xlarge" background={{"color":"#999999","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} width="300px">
+                    <Box align="center" justify="center" pad="xsmall" margin="xsmall">
+                        <Box height="small" width="small">
+                            <Image 
+                                fit="contain"
+                                src={exp.img}
+                            />
+                        </Box>
+                        <Box>
+                            <Button label="Détails" onClick={() => {setShow(true); setIndex(i)}} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
+                        </Box>
                     </Box>
-                    <Heading level="3" size="medium" margin="xsmall" textAlign="center" color="#333333">
-                        {exp.title}
-                    </Heading>
-                    <Text textAlign="center" size="small" color="#333333">
-                        "{exp.baseline}"
-                    </Text>
-                    <Paragraph size="small" margin="xsmall" textAlign="center" color="light">
-                        {exp.desc}
-                    </Paragraph>
-                    <Paragraph size="small" margin="xsmall" textAlign="center">
-                       <strong style={{color: "#333333"}}>Langage(s) :</strong> {exp.technos}
-                    </Paragraph>
                 </Box>
+            ))}; 
+            <Box>
+                {show && (
+                    <Layer
+                        onEsc={() => setShow(false)}
+                        onClickOutside={() => setShow(false)}
+                    >
+                        <Box align="center" justify="center" pad="medium">
+                            <Box height="small" width="small" pad="meidum">
+                                <Image align="center" justify="center"
+                                    fit="contain"
+                                    src={exps[index].img}
+                                />
+                            </Box>
+                            <Heading level="3" size="medium" margin="xsmall" textAlign="center" color="#333333">
+                                {exps[index].title}
+                            </Heading>
+                            <Text textAlign="center" size="small" color="#333333">
+                                <strong>Baseline :</strong> "{exps[index].baseline}"
+                            </Text>
+                            <Paragraph size="small" margin="xsmall" textAlign="center">
+                                <strong>Description :</strong> {exps[index].desc}
+                            </Paragraph>
+                            <Paragraph size="small" margin="xsmall" textAlign="center">
+                                <strong>Langage(s) :</strong> {exps[index].technos}
+                            </Paragraph>
+                            <Button label="close" onClick={() => setShow(false)} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
+                        </Box>
+                    </Layer>
+                )}
             </Box>
-        ))}; 
         </Box>
     );
 }
+
+
+        
+       
+   
 
 export default Experience;
