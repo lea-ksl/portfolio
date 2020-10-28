@@ -11,7 +11,7 @@ const theme = {
   "global": {
     "colors": {
       "brand": "#ED6F00",
-      "light": "#DADADA",
+      "light": "#999999",
       "background": {
         "dark": "#111111",
         "light": "#FFFFFF"
@@ -107,7 +107,13 @@ const theme = {
       "dark": "#111111",
       "light": "#FFFFFF"
     }
-  }
+  },
+    "heading" : {
+      "font": {
+      "family": "\"Rock Salt\"",
+      "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Rock Salt';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap);\n \n}\n/*"
+    }
+    }
 }
 
 const CvPage = () => {
