@@ -83,10 +83,12 @@ const Experience = ({ dispatch }) => {
                                     <strong>Description :</strong> {exps[index].desc}
                                 </Paragraph>
                                 <Paragraph size="small" margin="xsmall" textAlign="center">
-                                    <strong>Langage(s) :</strong> {exps[index].technos}
+                                    <strong>{translate('lang')} :</strong> {exps[index].technos}
                                 </Paragraph>
-                                <Button label="Voir le site" href={exps[index].link} target="_blank" disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={true} reverse={false} secondary={false} />
-                                <Button label="Fermer" onClick={() => setShow(false)} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
+                                <Box align="center" justify="space-evenly" direction="row-responsive" wrap="true" background={{"dark":false}} gap="medium">
+                                    <Button label={translate('visit')} href={exps[index].link} target="_blank" disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={true} reverse={false} secondary={false} />
+                                    <Button label={translate("down")} onClick={() => setShow(false)} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
+                                </Box>
                             </Box>
                         </Layer>
                     )}

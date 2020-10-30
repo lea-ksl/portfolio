@@ -3,6 +3,9 @@ module.exports = {
       locale: 'en-US',
       messages: {
         details: 'Read mode',
+        visit: 'Show Website',
+        down: 'Close',
+        lang: 'Language(s)',
         jobstic: { 
           key: "jobstic", 
           title: "JobsTIC", 
@@ -117,6 +120,9 @@ module.exports = {
       locale: 'fr',
       messages: {
         details: "Voir plus",
+        visit: 'Voir le site',
+        down: 'Fermer',
+        lang: 'Langage(s)',
         jobstic: { 
           key: "jobstic", 
           title: "JobsTIC", 
