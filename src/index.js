@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import store from './app/store';
+//import store from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import translations from './translations'
+import { IntlReducer as Intl, IntlProvider } from 'react-redux-multilingual'
+import { createStore, combineReducers } from 'redux'
+
+const defaultLocale = 'fr'
+const reducers = combineReducers(Object.assign({}, { Intl }))
+const store = createStore(reducers, { Intl: { locale: defaultLocale }})
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <IntlProvider translations={translations}>
+        <App />
+      </IntlProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

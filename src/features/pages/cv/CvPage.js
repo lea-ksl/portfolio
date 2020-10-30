@@ -12,6 +12,7 @@ const theme = {
     "colors": {
       "brand": "#ED6F00",
       "light": "#999999",
+      "test": "red",
       "background": {
         "dark": "#111111",
         "light": "#FFFFFF"
@@ -29,8 +30,8 @@ const theme = {
         "light": "#11111111"
       },
       "text": {
-        "dark": "#EEEEEE",
-        "light": "#333333"
+        "dark": "#ffffff",
+        "light": "#333333",
       },
       "text-strong": {
         "dark": "#FFFFFF",

@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Heading, Button, Text, Paragraph, Image, Layer } from 'grommet'
+import { connect } from 'react-redux'
+import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
 
 const theme = {
 
@@ -7,75 +9,91 @@ const theme = {
 
 
 
-const Experience = () => {
+const Experience = ({ dispatch }) => {
+    const translate = useTranslate()
     const [index, setIndex] = React.useState()
     const [show, setShow] = React.useState()
     let [exps, setExps] = React.useState(
     [
-        { key: "jobstic", title: "JobsTIC", baseline: "Le formum des métiers du numérique et de l'innovation", desc: "Conception et développement Front-end / Back-end", technos:"Meteor.js & React.js", img:"https://s3.eu-central-1.amazonaws.com/jobstic/documents/logo_jobstic_compressor-min.png", link: "https://jobstic.com" },
-        { key: "opencountry", title: "Open Country", baseline: "Les rencontres de la transformation numérique par La Mêlée", desc: "Conception et développement Front-end / Back-end", technos:"Meteor.js & React.js", img: "https://open-country.fr/images/icon_open_country.png", link: "https://open-country.fr" },
-        { key: "meleegeodata", title: "Mêlée Géodata", baseline: "Rencontrer, partager innover", desc: "Conception et développement Front-end / Back-end", technos:"Meteor.js & React.js", img: "https://meleegeodata.s3.eu-central-1.amazonaws.com/logo_melee_geodata.png", link: "https://melee-geodata.com" },
-        { key: "meleenumerique", title: "Mêlée Numérique", baseline: "Le festival du numérique et de l'innovation", desc: "Mises à jour fonctionnalités et contenu", technos:"WordPress", img: "https://meleenumerique.s3.eu-central-1.amazonaws.com/documents/LogoMN-Main-Colorx2.png", link: "https://meleenumerique.com" },
-        { key: "Rhinocc", title: "RhinOcc", baseline: "Réseau et Hub pour l'inclusion Numérique en Occitanie", desc: "Conception et développement Front-end / Back-end, Mises à jour fonctionnalités", technos:"WordPress", img: "https://rhinocc.fr/wp-content/uploads/2019/12/cropped-logo_rhinocc.png", link: "https://rhinocc.fr" },
-        { key: "lamelee", title: "La Mêlée", baseline: "La Mêlée, 1er réseau d’experts du numérique en Occitanie !", desc: "Développement Front-end / Back-end, Mises à jour fonctionnalités", technos:"WordPress", img: "https://meleenumerique.s3.eu-central-1.amazonaws.com/partners/1499775841040-logo-melee-version-quadri-converti.png", link: "https://lamelee.com" },
-        { key: "midenews", title: "Mid e-news", baseline: "L'actualité numérique du Sud-Ouest", desc: "Conception et développement Front-end / Back-end", technos:"WordPress", img: "https://meleenumerique.s3.eu-central-1.amazonaws.com/partners/Plan+de+travail+1.png", link: "https://midenews.com" },
-        { key: "lacantine", title: "La Cantine Toulouse", baseline: "Espace de coworking", desc: "Conception et développement Front-end / Back-end", technos:"PHP", img: "https://lacantine-toulouse.org/wp-content/uploads/2013/02/LaCantine-V2-300x242.png", link: "http://lacantine-toulouse.org" },
-        { key: "habillage", title: "Habillage Streaming Live", baseline: "Edition infos pour habillage live", desc: "Conception et développement Front-end", technos:"React.js", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png", link: "http://lchrlqg.cluster028.hosting.ovh.net/" },
-        { key: "fa2d", title: "FA2D", baseline: "Forum de l'Agriculture Digitale et Durable", desc: "Conception et développement Front-end / Back-end", technos:"Meteor.js & React.js", img: "https://s3.eu-central-1.amazonaws.com/testfa2d/images/logo_fa2d.png", link: "https://fa2d.fr" },
-        { key: "meetthebig", title: "Meet The Big", baseline: "LA rencontre entre les startups et les BIG", desc: "Développement Front-end / Back-end, Mises à jour fonctionnalités", technos:"WordPress", img: "https://meetthebig.com/wp-content/uploads/2019/07/mtb-logo.png", link: "https://meetthebig.com" },
-        { key: "ndr", title: "Nuit Des Réseaux", baseline: "Le rassemblement des clubs et réseaux d'entreprises du Sud-Ouest", desc: "Développement Front-end / Back-end, Mises à jour fonctionnalités", technos:"WordPress", img: "https://nuit-des-reseaux.com/wp-content/uploads/2019/01/logo-NDR-general-blanc.png", link: "https://nuit-des-reseaux.com/" },
+        { key: translate("jobstic.key"), title: translate("jobstic.title"), baseline: translate("jobstic.baseline"), desc: translate("jobstic.desc"), technos: translate("jobstic.technos"), img: translate("jobstic.img"), link: translate("jobstic.link") },
+        { key: translate("opencountry.key"), title: translate("opencountry.title"), baseline: translate("opencountry.baseline"), desc: translate("opencountry.desc"), technos: translate("opencountry.technos"), img: translate("opencountry.img"), link: translate("opencountry.link") },
+        { key: translate("meleegeodata.key"), title: translate("meleegeodata.title"), baseline: translate("meleegeodata.baseline"), desc: translate("meleegeodata.desc"), technos: translate("meleegeodata.technos"), img: translate("meleegeodata.img"), link: translate("meleegeodata.link") },
+        { key: translate("meleenumerique.key"), title: translate("meleenumerique.title"), baseline: translate("meleenumerique.baseline"), desc: translate("meleenumerique.desc"), technos: translate("meleenumerique.technos"), img: translate("meleenumerique.img"), link: translate("meleenumerique.link") },
+        { key: translate("rhinocc.key"), title: translate("rhinocc.title"), baseline: translate("rhinocc.baseline"), desc: translate("rhinocc.desc"), technos: translate("rhinocc.technos"), img: translate("rhinocc.img"), link: translate("rhinocc.link") },
+        { key: translate("lamelee.key"), title: translate("lamelee.title"), baseline: translate("lamelee.baseline"), desc: translate("lamelee.desc"), technos: translate("lamelee.technos"), img: translate("lamelee.img"), link: translate("lamelee.link") },
+        { key: translate("midenews.key"), title: translate("midenews.title"), baseline: translate("midenews.baseline"), desc: translate("midenews.desc"), technos: translate("midenews.technos"), img: translate("midenews.img"), link: translate("midenews.link") },
+        { key: translate("lacantine.key"), title: translate("lacantine.title"), baseline: translate("lacantine.baseline"), desc: translate("lacantine.desc"), technos: translate("lacantine.technos"), img: translate("lacantine.img"), link: translate("lacantine.link") },
+        { key: translate("habillage.key"), title: translate("habillage.title"), baseline: translate("habillage.baseline"), desc: translate("habillage.desc"), technos: translate("habillage.technos"), img: translate("habillage.img"), link: translate("habillage.link") },
+        { key: translate("fa2d.key"), title: translate("fa2d.title"), baseline: translate("fa2d.baseline"), desc: translate("fa2d.desc"), technos: translate("fa2d.technos"), img: translate("fa2d.img"), link: translate("fa2d.link") },
+        { key: translate("meetthebig.key"), title: translate("meetthebig.title"), baseline: translate("meetthebig.baseline"), desc: translate("meetthebig.desc"), technos: translate("meetthebig.technos"), img: translate("meetthebig.img"), link: translate("meetthebig.link") },
+        { key: translate("ndr.key"), title: translate("ndr.title"), baseline: translate("ndr.baseline"), desc: translate("ndr.desc"), technos: translate("ndr.technos"), img: translate("ndr.img"), link: translate("ndr.link") },
     ]);
 
     return(
-        <Box align="stretch" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}}>
-            {exps.map((exp, i) => (
-                <Box align="stretch" fil="horizontal" gap="xlarge" background={{"color":"#999999","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} width="300px">
-                    <Box align="center" justify="center" pad="xsmall" margin="xsmall">
-                        <Box height="small" width="small">
-                            <Image 
-                                fit="contain"
-                                src={exp.img}
-                            />
-                        </Box>
-                        <Box>
-                            <Button label="Détails" onClick={() => {setShow(true); setIndex(i)}} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
-                        </Box>
-                    </Box>
-                </Box>
-            ))}; 
-            <Box>
-                {show && (
-                    <Layer
-                        onEsc={() => setShow(false)}
-                        onClickOutside={() => setShow(false)}
-                    >
-                        <Box align="center" justify="center" pad="medium">
-                            <Box height="small" width="small" pad="meidum">
-                                <Image align="center" justify="center"
+        <Box align="stretch" justify="center" direction="column-responsive" wrap="true" background={{"dark":false}}>
+            <Box align="center" justify="space-evenly" direction="row-responsive" wrap="true" background={{"dark":false}} gap="medium">
+                <Button disabled={false} hoverIndicator color="light-2"  active={false} plain={false} primary reverse={true} secondary={false}
+                    onClick={() => {
+                        dispatch(IntlActions.setLocale('en'))
+                    }}>English
+                </Button>
+                <Button disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary reverse={false} secondary={false}
+                    onClick={() => {
+                        dispatch(IntlActions.setLocale('fr'))
+                    }}>Français
+                </Button>
+            </Box>
+            <Box align="stretch" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}}>
+                {exps.map((exp, i) => (
+                    <Box align="stretch" fil="horizontal" gap="xlarge" background={{"color":"#999999","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} width="300px">
+                        <Box align="center" justify="center" pad="xsmall" margin="xsmall">
+                            <Box height="small" width="small">
+                                
+                                <Image 
                                     fit="contain"
-                                    src={exps[index].img}
+                                    src={exp.img}
                                 />
                             </Box>
-                            <Heading level="3" size="medium" margin="xsmall" textAlign="center" color="#333333">
-                                {exps[index].title}
-                            </Heading>
-                            <Text textAlign="center" size="small" color="#333333">
-                                <strong>Baseline :</strong> "{exps[index].baseline}"
-                            </Text>
-                            <Paragraph size="small" margin="xsmall" textAlign="center">
-                                <strong>Description :</strong> {exps[index].desc}
-                            </Paragraph>
-                            <Paragraph size="small" margin="xsmall" textAlign="center">
-                                <strong>Langage(s) :</strong> {exps[index].technos}
-                            </Paragraph>
-                            <Button label="Voir le site" href={exps[index].link} target="_blank" disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={true} reverse={false} secondary={false} />
-                            <Button label="Fermer" onClick={() => setShow(false)} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
+                            <Box>
+                                <Button label={translate('details')} onClick={() => {setShow(true); setIndex(i)}} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
+                            </Box>
                         </Box>
-                    </Layer>
-                )}
+                    </Box>
+                ))}; 
+                <Box>
+                    {show && (
+                        <Layer
+                            onEsc={() => setShow(false)}
+                            onClickOutside={() => setShow(false)}
+                        >
+                            <Box align="center" justify="center" pad="medium">
+                                <Box height="small" width="small" pad="meidum">
+                                    <Image align="center" justify="center"
+                                        fit="contain"
+                                        src={exps[index].img}
+                                    />
+                                </Box>
+                                <Heading level="3" size="medium" margin="xsmall" textAlign="center" color="#333333">
+                                    {exps[index].title}
+                                </Heading>
+                                <Text textAlign="center" size="small" color="#333333">
+                                    <strong>Baseline :</strong> "{exps[index].baseline}"
+                                </Text>
+                                <Paragraph size="small" margin="xsmall" textAlign="center">
+                                    <strong>Description :</strong> {exps[index].desc}
+                                </Paragraph>
+                                <Paragraph size="small" margin="xsmall" textAlign="center">
+                                    <strong>Langage(s) :</strong> {exps[index].technos}
+                                </Paragraph>
+                                <Button label="Voir le site" href={exps[index].link} target="_blank" disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={true} reverse={false} secondary={false} />
+                                <Button label="Fermer" onClick={() => setShow(false)} disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary={false} reverse={false} secondary={false} />
+                            </Box>
+                        </Layer>
+                    )}
+                </Box>
             </Box>
         </Box>
     );
 }   
 
-export default Experience;
+export default connect()(Experience)
