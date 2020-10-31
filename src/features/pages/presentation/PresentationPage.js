@@ -19,10 +19,10 @@ const theme = {
             }
         },
         "heading" : {
-          "font": {
-            "family": "\"Rock Salt\"",
-            "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Rock Salt';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap);\n \n}\n/*"
-          }
+            "font": {
+                "family": "\"Rock Salt\"",
+                "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Rock Salt';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap);\n \n}\n/*"
+            }
         }
     }
 }
