@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box } from 'grommet'
+import { Box, Heading, List, Text } from 'grommet'
 
 const theme = {
   "global": {
@@ -11,7 +11,9 @@ const theme = {
     "colors": {
         "brand": "#ED6F00",
         "light": "#999999",
-        "dark-2":"#555555",
+        "dark-1": "#333333",
+        "dark-2": "#555555",
+        "dark-5": "#999999",
         "background": {
           "dark": "#111111",
           "light": "#FFFFFF"
@@ -22,8 +24,24 @@ const theme = {
 
 const Biography = () => {
     return (
-        <Box width="" background={{color: "dark-2"}}>
-           coucou
+        <Box pad="medium" align="center" fil="horizontal" gap="medium" background={{"color":"dark-1","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} max-width="30em">
+           <Heading level="3" size="medium" margin="xsmall" textAlign="center" color="dark-5">
+                Léa SEMIRAMOTH
+            </Heading>
+            <List
+                primaryKey="designation"
+                secondaryKey="result"
+                data={[
+                    { designation: 'Fonction', result: 'Responsable technique' },
+                    { designation: 'Entreprise', result: 'La Mêlée' },
+                    { designation: 'Formation', result: 'Mastere 2 Expert développement Web' },
+                    { designation: 'Ecole', result: 'Toulouse Ynov Campus' },
+                    { designation: 'E-mail', result: 'semiramoth.lea@gmail.com' },
+                    { designation: 'Age', result: '32 ans' },
+                    { designation: 'Qualités', result: "Organisation, réactivité, esprit d'équipe" },
+                    { designation: 'Défauts', result: 'Impatience, gourmandise, curiosité' },
+                ]}
+            />
         </Box>
     )
 }

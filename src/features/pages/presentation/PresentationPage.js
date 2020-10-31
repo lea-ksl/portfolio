@@ -32,12 +32,12 @@ const Presentation = () => {
 
     return(
         <Grommet full theme={theme}>
-            <Box width="100%" align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}} height="100vh">
+            <Box width="100%" align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>
                 <NavBar />
                 <Header align="center" direction="row" flex={false} justify="between" gap="medium">
                     <Heading color="light">Présentation</Heading>
                 </Header>
-                <Box  width="100%" align="center" justify="evenly" direction="row-responsive" wrap="true">
+                <Box width="100%" align="center" justify="evenly" direction="row-responsive" wrap="true">
                     <Puzzle
                         image='http://ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?w=646&ssl=1%20646w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=150%2C150&ssl=1%20150w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=250%2C252&ssl=1%20250w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=120%2C121&ssl=1%20120w'
                     />

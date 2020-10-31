@@ -48,7 +48,6 @@ const Experience = ({ dispatch }) => {
                     <Box align="stretch" fil="horizontal" gap="xlarge" background={{"color":"#999999","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} width="300px">
                         <Box align="center" justify="center" pad="xsmall" margin="xsmall">
                             <Box height="small" width="small">
-                                
                                 <Image 
                                     fit="contain"
                                     src={exp.img}
