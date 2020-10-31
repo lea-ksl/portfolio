@@ -7,6 +7,10 @@ import { connect } from 'react-redux'
 import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
 
 const theme = {
+    "name": "aruba",
+    "rounding": 4,
+    "spacing": 24,
+    "defaultMode": "light",
     "global": {
         "font": {
             "family": "\"Open Sans\"",
@@ -19,12 +23,12 @@ const theme = {
                 "dark": "#111111",
                 "light": "#FFFFFF"
             }
-        },
-        "heading" : {
-            "font": {
-                "family": "\"Rock Salt\"",
-                "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Rock Salt';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap);\n \n}\n/*"
-            }
+        }
+    },
+    "heading" : {
+        "font": {
+            "family": "\"Rock Salt\"",
+            "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Rock Salt';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap);\n \n}\n/*"
         }
     }
 }
@@ -36,7 +40,6 @@ const Presentation = () => {
         <Grommet full theme={theme}>
             <Box width="100%" align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>
                 <NavBar />
-                
                 <Header align="center" direction="row" flex={false} justify="between" gap="medium">
                     <Heading color="light">{translate('heading.prez')}</Heading>
                 </Header>
