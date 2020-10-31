@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBar from '../../components/navigation/NavBar'
-import { Meter, Grommet, Box, Header, Heading } from 'grommet'
+import Puzzle from 'react-image-puzzle-touch';
+import Biography from '../../components/biography/Biography'
+import { Grommet, Box, Header, Heading } from 'grommet'
 
 const theme = {
     "global": {
@@ -15,20 +17,32 @@ const theme = {
                 "dark": "#111111",
                 "light": "#FFFFFF"
             }
-        } 
+        },
+        "heading" : {
+          "font": {
+            "family": "\"Rock Salt\"",
+            "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Rock Salt';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap);\n \n}\n/*"
+          }
+        }
     }
-  }
+}
+    
 
 const Presentation = () => {
 
     return(
         <Grommet full theme={theme}>
-            <Box align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>
+            <Box width="100%" align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}} height="100vh">
                 <NavBar />
                 <Header align="center" direction="row" flex={false} justify="between" gap="medium">
                     <Heading color="light">Présentation</Heading>
                 </Header>
-                
+                <Box  width="100%" align="center" justify="evenly" direction="row-responsive" wrap="true">
+                    <Puzzle
+                        image='http://ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?w=646&ssl=1%20646w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=150%2C150&ssl=1%20150w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=250%2C252&ssl=1%20250w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=120%2C121&ssl=1%20120w'
+                    />
+                    <Biography />
+                </Box>
             </Box>
         </Grommet>
         

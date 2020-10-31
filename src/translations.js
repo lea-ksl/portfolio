@@ -9,7 +9,7 @@ module.exports = {
         jobstic: { 
           key: "jobstic", 
           title: "JobsTIC", 
-          baseline: "The formum of digital and innovation professions", 
+          baseline: "The digital and innovation professions forum", 
           desc: "Design and Front-end / Back-end development", 
           technos:"Meteor.js & React.js", 
           img:"https://s3.eu-central-1.amazonaws.com/jobstic/documents/logo_jobstic_compressor-min.png", 
@@ -18,7 +18,7 @@ module.exports = {
         opencountry: { 
           key: "opencountry", 
           title: "Open Country", 
-          baseline: "The meetings of digital transformation by La Mêlée", 
+          baseline: "The digital transformation meetings by La Mêlée", 
           desc: "Design and Front-end / Back-end development", 
           technos:"Meteor.js & React.js", 
           img: "https://open-country.fr/images/icon_open_country.png", 

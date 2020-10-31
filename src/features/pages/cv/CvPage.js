@@ -1,7 +1,7 @@
 import React from "react";
 import Experience from "../../components/experience/Experience"
 import NavBar from "../../components/navigation/NavBar";
-import { Grommet, Box, Header, Heading, Button, Text, Paragraph, Image } from 'grommet'
+import { Grommet, Box, Header, Heading } from 'grommet'
 
 const theme = {
   "name": "aruba",
@@ -114,7 +114,7 @@ const theme = {
       "family": "\"Rock Salt\"",
       "face": "/* cyrillic-ext */\n@font-face {\n  font-family: 'Rock Salt';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Rock Salt Regular'), local('RockSalt-Regular'), url(https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap);\n \n}\n/*"
     }
-    }
+  }
 }
 
 const CvPage = () => {
