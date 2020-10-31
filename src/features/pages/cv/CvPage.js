@@ -100,17 +100,6 @@ const theme = {
       "color": "selected-text"
     }
   },
-  "chart": {},
-  "diagram": {
-    "line": {}
-  },
-  "meter": {},
-  "layer": {
-    "background": {
-      "dark": "#111111",
-      "light": "#FFFFFF"
-    }
-  },
     "heading" : {
       "font": {
       "family": "\"Rock Salt\"",

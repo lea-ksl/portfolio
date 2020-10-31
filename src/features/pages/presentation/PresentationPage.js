@@ -8,9 +8,9 @@ import { useTranslate } from 'react-redux-multilingual'
 
 const theme = {
     "name": "aruba",
+    "defaultMode": "light",
     "rounding": 4,
     "spacing": 24,
-    "defaultMode": "light",
     "global": {
         "font": {
             "family": "\"Open Sans\"",
@@ -18,11 +18,14 @@ const theme = {
         },
         "colors": {
             "brand": "#ED6F00",
-            "light": "#DADADA",
+            "light": "#999999",
+            "dark-1": "#333333",
+            "dark-2": "#555555",
+            "dark-5": "#999999",
             "background": {
-                "dark": "#111111",
-                "light": "#FFFFFF"
-            }
+              "dark": "#111111",
+              "light": "#FFFFFF"
+            },
         }
     },
     "heading" : {
@@ -37,19 +40,19 @@ const theme = {
 const Presentation = () => {
     const translate = useTranslate()
     return(
-        <Grommet full theme={theme}>
+        <Grommet theme={theme}>
             <Box width="100%" align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>
                 <NavBar />
                 <Header align="center" direction="row" flex={false} justify="between" gap="medium">
                     <Heading color="light">{translate('heading.prez')}</Heading>
                 </Header>
-                <Box width="100%" align="center" justify="evenly" direction="row-responsive" wrap="true">
+                <Box width="100%" align="center" justify="evenly" direction="row" wrap="true">
                     <Box align="center">
                         <Puzzle
                             image='http://ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?w=646&ssl=1%20646w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=150%2C150&ssl=1%20150w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=250%2C252&ssl=1%20250w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=120%2C121&ssl=1%20120w'
                         />
-                        <Box background={{"color":"black"}} round="xsmall" margin="small">
-                            <Text textAlign="center" size="small" color="#ffffff" margin="small" >
+                        <Box background={{"color":"test"}} round="xsmall"  gap="medium">
+                            <Text textAlign="center" size="small">
                                 {translate('help')}
                             </Text>
                         </Box>
