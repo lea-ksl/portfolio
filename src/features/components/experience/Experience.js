@@ -1,11 +1,7 @@
 import React from "react";
 import { Box, Heading, Button, Text, Paragraph, Image, Layer } from 'grommet'
 import { connect } from 'react-redux'
-import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
-
-const theme = {
-
-}
+import { useTranslate } from 'react-redux-multilingual'
 
 
 
@@ -13,7 +9,7 @@ const Experience = () => {
     const translate = useTranslate()
     const [index, setIndex] = React.useState()
     const [show, setShow] = React.useState()
-    let [exps, setExps] = React.useState(
+    let [exps] = React.useState(
     [
         { key: translate("jobstic.key"), title: translate("jobstic.title"), baseline: translate("jobstic.baseline"), desc: translate("jobstic.desc"), technos: translate("jobstic.technos"), img: translate("jobstic.img"), link: translate("jobstic.link") },
         { key: translate("opencountry.key"), title: translate("opencountry.title"), baseline: translate("opencountry.baseline"), desc: translate("opencountry.desc"), technos: translate("opencountry.technos"), img: translate("opencountry.img"), link: translate("opencountry.link") },

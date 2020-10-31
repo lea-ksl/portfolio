@@ -4,7 +4,7 @@ import Puzzle from 'react-image-puzzle-touch';
 import Biography from '../../components/biography/Biography'
 import { Grommet, Box, Header, Heading, Text } from 'grommet'
 import { connect } from 'react-redux'
-import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
+import { useTranslate } from 'react-redux-multilingual'
 
 const theme = {
     "name": "aruba",

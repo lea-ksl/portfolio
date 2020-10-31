@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from '../../components/navigation/NavBar'
-import { Grommet, Box, Header, Heading, Button, Text, Paragraph, Image, Anchor, Nav } from 'grommet'
+import { Grommet, Box, Header, Heading, Image } from 'grommet'
 
 
 const theme = {

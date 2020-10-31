@@ -3,7 +3,7 @@ import HomePage from './features/pages/homepage/HomePage';
 import CvPage from './features/pages/cv/CvPage'
 import PresentationPage from './features/pages/presentation/PresentationPage'
 import { Grommet } from 'grommet';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (

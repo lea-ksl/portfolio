@@ -3,7 +3,7 @@ import Experience from "../../components/experience/Experience"
 import NavBar from "../../components/navigation/NavBar";
 import { Grommet, Box, Header, Heading } from 'grommet'
 import { connect } from 'react-redux'
-import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
+import { useTranslate } from 'react-redux-multilingual'
 
 const theme = {
   "name": "aruba",

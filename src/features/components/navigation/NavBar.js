@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux'
-import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
+import { IntlActions, useTranslate } from 'react-redux-multilingual'
 import { Anchor, Nav, Box, Button } from 'grommet'
 
 const theme = {
@@ -15,7 +15,7 @@ const theme = {
 const NavBar = ({dispatch}) => {
   const translate = useTranslate()
     return (
-        <Box width="100%" align="center" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}} gap="medium">
+        <Box  theme={theme} width="100%" align="center" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}} gap="medium">
           <Box align="center" justify="space-evenly" direction="row-responsive" wrap="true" background={{"dark":false}} gap="medium"></Box>
             <Nav direction="row" pad="small" justify="center">
                 <Anchor color="grey" href="/" label={translate('heading.home')} />
