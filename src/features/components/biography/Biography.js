@@ -34,14 +34,14 @@ const Biography = () => {
                 primaryKey="designation"
                 secondaryKey="result"
                 data={[
-                    { designation: 'Fonction', result: 'Responsable technique' },
-                    { designation: 'Entreprise', result: 'La Mêlée' },
-                    { designation: 'Formation', result: 'Mastere 2 Expert développement Web' },
-                    { designation: 'Ecole', result: 'Toulouse Ynov Campus' },
-                    { designation: 'E-mail', result: 'semiramoth.lea@gmail.com' },
-                    { designation: 'Age', result: '32 ans' },
-                    { designation: 'Qualités', result: "Organisation, réactivité, esprit d'équipe" },
-                    { designation: 'Défauts', result: 'Impatience, gourmandise, curiosité' },
+                    { designation: `${translate('prezlist.functiontitle')}`, result: `${translate('prezlist.function')}` },
+                    { designation: `${translate('prezlist.company')}`, result: `${translate('prezlist.melee')}` },
+                    { designation: `${translate('prezlist.training')}`, result: `${translate('prezlist.mastere')}` },
+                    { designation: `${translate('prezlist.school')}`, result: `${translate('prezlist.ynov')}` },
+                    { designation: `${translate('prezlist.email')}`, result: `${translate('prezlist.emailadress')}` },
+                    { designation: `${translate('prezlist.agetitle')}`, result: `${translate('prezlist.age')}` },
+                    { designation: `${translate('prezlist.qualitytitle')}`, result: `${translate('prezlist.qualities')}` },
+                    { designation: `${translate('prezlist.defaultitle')}`, result: `${translate('prezlist.defaults')}` },
                 ]}
             />
         </Box>

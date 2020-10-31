@@ -20,7 +20,7 @@ const NavBar = ({dispatch}) => {
             <Nav direction="row" pad="small" justify="center">
                 <Anchor color="grey" href="/" label={translate('heading.home')} />
                 <Anchor color="grey" href="/presentation" label={translate("heading.prez")} />
-                <Anchor color="grey" href="/cv" label="Experiences" />
+                <Anchor color="grey" href="/cv" label={translate("heading.experiences")} />
             </Nav>
             <Box align="center" justify="space-evenly" direction="row-responsive" wrap="true" background={{"dark":false}} gap="medium">
                     <Button disabled={false} hoverIndicator color="light-2"  active={false} plain={false} primary reverse={true} secondary={false}

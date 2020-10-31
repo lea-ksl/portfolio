@@ -2,6 +2,8 @@ import React from "react";
 import Experience from "../../components/experience/Experience"
 import NavBar from "../../components/navigation/NavBar";
 import { Grommet, Box, Header, Heading } from 'grommet'
+import { connect } from 'react-redux'
+import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
 
 const theme = {
   "name": "aruba",
@@ -118,13 +120,13 @@ const theme = {
 }
 
 const CvPage = () => {
-    
+  const translate = useTranslate()  
   return (
     <Grommet full theme={theme}>
       <Box align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>
         <NavBar />
         <Header align="center" direction="row" flex={false} justify="between" gap="medium">
-            <Heading color="light">Expériences en entreprise</Heading>
+            <Heading color="light">{translate('heading.exptitle')}</Heading>
         </Header>
         <Experience />
       </Box>
@@ -133,4 +135,4 @@ const CvPage = () => {
 }
 
 
-export default CvPage;
+export default connect()(CvPage)

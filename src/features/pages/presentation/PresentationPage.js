@@ -30,9 +30,8 @@ const theme = {
 }
     
 
-const Presentation = ({ dispatch }) => {
+const Presentation = () => {
     const translate = useTranslate()
-
     return(
         <Grommet full theme={theme}>
             <Box width="100%" align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>

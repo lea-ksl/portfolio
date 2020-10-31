@@ -10,6 +10,26 @@ module.exports = {
         heading: {
           prez: 'Presentation',
           home: 'Home',
+          experiences: 'Experiences',
+          exptitle: 'Company experiences'
+        },
+        prezlist: {
+          functiontitle: 'Function',
+          function: 'Technical Manager',
+          company: 'Company',
+          melee: 'La Mêlée',
+          training: 'Training', 
+          mastere: 'Mastere 2 Web Development Expert',
+          school: 'School', 
+          ynov: 'Toulouse Ynov Campus',
+          email: 'E-mail', 
+          emailadress: 'semiramoth.lea@gmail.com',
+          agetitle: 'Age', 
+          age: '32 years old',
+          qualitytitle: 'Qualities', 
+          qualities: "Organization, reactivity, team spirit" ,
+          defaultitle: 'Defaults', 
+          defaults: 'Impatience, greed, curiosity' ,
         },
         jobstic: { 
           key: "jobstic", 
@@ -119,7 +139,7 @@ module.exports = {
           img: "https://nuit-des-reseaux.com/wp-content/uploads/2019/04/Logo-Color%C3%A9-11.png", 
           link: "https://nuit-des-reseaux.com/" 
         },
-      }
+      },
     },
     fr: {
       locale: 'fr',
@@ -132,6 +152,26 @@ module.exports = {
         heading: {
           prez: 'Présentation',
           home: 'Accueil',
+          experiences: 'Expériences',
+          exptitle: 'Expériences en entreprise'
+        },
+        prezlist: {
+          functiontitle: 'Fonction',
+          function: 'Responsable technique',
+          company: 'Entreprise',
+          melee: 'La Mêlée',
+          training: 'Formation', 
+          mastere: 'Mastere 2 Expert développement Web',
+          school: 'Ecole', 
+          ynov: 'Toulouse Ynov Campus',
+          email: 'E-mail', 
+          emailadress: 'semiramoth.lea@gmail.com',
+          agetitle: 'Age', 
+          age: '32 ans',
+          qualitytitle: 'Qualités', 
+          qualities: "Organisation, réactivité, esprit d'équipe",
+          defaultitle: 'Défauts', 
+          defaults: 'Impatience, gourmandise, curiosité',
         },
         jobstic: { 
           key: "jobstic", 
