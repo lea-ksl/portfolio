@@ -2,10 +2,15 @@ module.exports = {
     en: {
       locale: 'en-US',
       messages: {
+        help: 'Drag and drop images to put the puzzle back together.',
         details: 'Read mode',
         visit: 'Show Website',
         down: 'Close',
         lang: 'Language(s)',
+        heading: {
+          prez: 'Presentation',
+          home: 'Home',
+        },
         jobstic: { 
           key: "jobstic", 
           title: "JobsTIC", 
@@ -111,7 +116,7 @@ module.exports = {
           baseline: "The South-West business clubs and networks gathering", 
           desc: "Front-end / Back-end development, Feature updates", 
           technos:"WordPress", 
-          img: "https://nuit-des-reseaux.com/wp-content/uploads/2019/01/logo-NDR-general-blanc.png", 
+          img: "https://nuit-des-reseaux.com/wp-content/uploads/2019/04/Logo-Color%C3%A9-11.png", 
           link: "https://nuit-des-reseaux.com/" 
         },
       }
@@ -119,10 +124,15 @@ module.exports = {
     fr: {
       locale: 'fr',
       messages: {
+        help: 'Glissez, déposez les images pour reconstituer le puzzle',
         details: "Voir plus",
         visit: 'Voir le site',
         down: 'Fermer',
         lang: 'Langage(s)',
+        heading: {
+          prez: 'Présentation',
+          home: 'Accueil',
+        },
         jobstic: { 
           key: "jobstic", 
           title: "JobsTIC", 
@@ -227,7 +237,7 @@ module.exports = {
           baseline: "Le rassemblement des clubs et réseaux d'entreprises du Sud-Ouest", 
           desc: "Développement Front-end / Back-end, Mises à jour fonctionnalités", 
           technos:"WordPress", 
-          img: "https://nuit-des-reseaux.com/wp-content/uploads/2019/01/logo-NDR-general-blanc.png", 
+          img: "https://nuit-des-reseaux.com/wp-content/uploads/2019/04/Logo-Color%C3%A9-11.png", 
           link: "https://nuit-des-reseaux.com/" 
         },
       }

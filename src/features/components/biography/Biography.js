@@ -1,5 +1,6 @@
 import React from "react";
-
+import { connect } from 'react-redux'
+import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
 import { Box, Heading, List, Text } from 'grommet'
 
 const theme = {
@@ -23,6 +24,7 @@ const theme = {
 }
 
 const Biography = () => {
+    const translate = useTranslate()
     return (
         <Box pad="medium" align="center" fil="horizontal" gap="medium" background={{"color":"dark-1","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} max-width="30em">
            <Heading level="3" size="medium" margin="xsmall" textAlign="center" color="dark-5">
@@ -46,4 +48,4 @@ const Biography = () => {
     )
 }
 
-export default Biography;
+export default connect()(Biography)

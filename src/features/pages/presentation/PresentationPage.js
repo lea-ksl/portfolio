@@ -2,7 +2,9 @@ import React from 'react';
 import NavBar from '../../components/navigation/NavBar'
 import Puzzle from 'react-image-puzzle-touch';
 import Biography from '../../components/biography/Biography'
-import { Grommet, Box, Header, Heading } from 'grommet'
+import { Grommet, Box, Header, Heading, Text } from 'grommet'
+import { connect } from 'react-redux'
+import { withTranslate, IntlActions, useTranslate } from 'react-redux-multilingual'
 
 const theme = {
     "global": {
@@ -28,19 +30,28 @@ const theme = {
 }
     
 
-const Presentation = () => {
+const Presentation = ({ dispatch }) => {
+    const translate = useTranslate()
 
     return(
         <Grommet full theme={theme}>
             <Box width="100%" align="center" justify="center" background={{"dark":false, 'image':'url(https://ksl-webdesign.com/wp-content/uploads/2016/06/marbrenoirsite.jpg)', "size": "contain", 'repeat': 'repeat'}}>
                 <NavBar />
+                
                 <Header align="center" direction="row" flex={false} justify="between" gap="medium">
-                    <Heading color="light">Présentation</Heading>
+                    <Heading color="light">{translate('heading.prez')}</Heading>
                 </Header>
                 <Box width="100%" align="center" justify="evenly" direction="row-responsive" wrap="true">
-                    <Puzzle
-                        image='http://ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?w=646&ssl=1%20646w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=150%2C150&ssl=1%20150w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=250%2C252&ssl=1%20250w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=120%2C121&ssl=1%20120w'
-                    />
+                    <Box align="center">
+                        <Puzzle
+                            image='http://ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?w=646&ssl=1%20646w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=150%2C150&ssl=1%20150w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=250%2C252&ssl=1%20250w,%20https://i0.wp.com/ksl-webdesign.com/wp-content/uploads/2016/04/lea.jpg?resize=120%2C121&ssl=1%20120w'
+                        />
+                        <Box background={{"color":"black"}} round="xsmall" margin="small">
+                            <Text textAlign="center" size="small" color="#ffffff" margin="small" >
+                                {translate('help')}
+                            </Text>
+                        </Box>
+                    </Box>
                     <Biography />
                 </Box>
             </Box>
@@ -49,5 +60,4 @@ const Presentation = () => {
     )
 
 }
-
-export default Presentation;
+export default connect()(Presentation)

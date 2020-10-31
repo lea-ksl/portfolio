@@ -9,7 +9,7 @@ const theme = {
 
 
 
-const Experience = ({ dispatch }) => {
+const Experience = () => {
     const translate = useTranslate()
     const [index, setIndex] = React.useState()
     const [show, setShow] = React.useState()
@@ -31,18 +31,7 @@ const Experience = ({ dispatch }) => {
 
     return(
         <Box align="stretch" justify="center" direction="column-responsive" wrap="true" background={{"dark":false}}>
-            <Box align="center" justify="space-evenly" direction="row-responsive" wrap="true" background={{"dark":false}} gap="medium">
-                <Button disabled={false} hoverIndicator color="light-2"  active={false} plain={false} primary reverse={true} secondary={false}
-                    onClick={() => {
-                        dispatch(IntlActions.setLocale('en'))
-                    }}>English
-                </Button>
-                <Button disabled={false} hoverIndicator color="dark-2" active={false} plain={false} primary reverse={false} secondary={false}
-                    onClick={() => {
-                        dispatch(IntlActions.setLocale('fr'))
-                    }}>Français
-                </Button>
-            </Box>
+            
             <Box align="stretch" justify="center" direction="row-responsive" wrap="true" background={{"dark":false}}>
                 {exps.map((exp, i) => (
                     <Box align="stretch" fil="horizontal" gap="xlarge" background={{"color":"#999999","position":"bottom"}} round="small" elevation="medium" margin="small" direction="column" animation={{"type":"fadeIn","size":"medium"}} justify="stretch" wrap={false} width="300px">
